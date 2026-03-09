@@ -18,11 +18,11 @@ except ImportError:
 
 BANNER = fr"""
 {Fore.LIGHTBLUE_EX}================================================================={Style.RESET_ALL}
-{Fore.WHITE}      ____  _____ _____ _   _ _____     ___    ____ {Style.RESET_ALL}
-{Fore.WHITE}     / __ \| ____|_   _| \ | |_   _|   / \ \  |  _ \{Style.RESET_ALL}
-{Fore.LIGHTBLUE_EX}    | |  | |  _|   | | |  \| | | |    / _ \ \ | |_) |{Style.RESET_ALL}
-{Fore.WHITE}    | |__| | |___  | | | |\  | | |   / ___ \ \|  _ <{Style.RESET_ALL}
-{Fore.WHITE}     \____/|_____| |_| |_| \_| |_|  /_/   \_\_|_| \_\ {Style.RESET_ALL}
+{Fore.WHITE}      _   _ ___ ______  _        _         {Style.RESET_ALL}
+{Fore.WHITE}     | | | |_ _|  ___/ \ |      / \   _ __ {Style.RESET_ALL}
+{Fore.LIGHTBLUE_EX}     | |_| || || |_ / _ \      / _ \ | '__|{Style.RESET_ALL}
+{Fore.WHITE}     |  _  || ||  _/ ___ \    / ___ \| |   {Style.RESET_ALL}
+{Fore.WHITE}     |_| |_|___|_|/_/   \_\  /_/   \_\_|   {Style.RESET_ALL}
 {Fore.LIGHTBLUE_EX}================================================================={Style.RESET_ALL}
 {Fore.YELLOW}  >> Herramienta de Inteligencia de Fuentes Abiertas - Argentina <<{Style.RESET_ALL}
 """

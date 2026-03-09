@@ -16,9 +16,38 @@ Este proyecto tiene como objetivo centralizar los recursos dispersos para facili
 
 La información listada en este repositorio apunta a fuentes de acceso público y legal. El uso de estos recursos debe realizarse en el marco de la **Ley 25.326 de Protección de los Datos Personales** y demás normativas vigentes en el territorio argentino. Los autores y contribuyentes no se responsabilizan por el mal uso de la información obtenida a través de los enlaces aquí provistos. Toda recolección y tratamiento de datos es bajo estricta responsabilidad del analista.
 
-## Sumario
+## 💻 Herramienta OSINT Argentina (CLI)
 
-- [OSINT Argentina](#osint-argentina)
+Junto al repositorio documental, hemos desarrollado un script modular en Python (`osint_ar.py`) para automatizar las búsquedas iniciales más comunes. **La herramienta es 100% segura, de código abierto, corre localmente en tu máquina y NO requiere ni expone ninguna API Key externa.**
+
+### Instalación
+
+1. Clona el repositorio e ingresa al directorio:
+   ```bash
+   git clone https://github.com/facusturla/osint-argentina.git
+   cd osint-argentina
+   ```
+2. Instala los requerimientos de Python:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Uso
+
+Actualmente, el script cuenta con 3 módulos principales:
+
+*   **Búsqueda de Usuario (`-u`):** Rastrea la existencia de un *username* específico en redes sociales globales y plataformas locales (MercadoLibre, Taringa histórico, etc.).
+    `python osint_ar.py -u osintbrazuca`
+*   **Averiguación de Dominio (`-d`):** Recupera la dirección IP de un dominio y verifica si está registrado (especialmente útil para entender el estado de dominios `.ar` frente a NIC.ar).
+    `python osint_ar.py -d mercadolibre.com.ar`
+*   **Validador de CUIT/CUIL (`-c`):** Valida matemáticamente (vía dígito verificador) si un número de CUIT o CUIL es real, e infiere el género o el tipo de persona/sociedad.
+    `python osint_ar.py -c 20123456781`
+
+---
+
+## 📚 Directorio de Fuentes y Registros
+
+1. [Identidad y Registros de Personas](#identidad-y-registros-de-personas)
   - [Avisos Legales y Éticos](#avisos-legales-y-éticos)
   - [Sumario](#sumario)
     - [Identidad y Registros de Personas](#identidad-y-registros-de-personas)
