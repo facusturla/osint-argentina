@@ -55,7 +55,7 @@ def main():
             print(f"  {Fore.RED}[-] Error:{Style.RESET_ALL} {result.get('error')}")
             
     if args.username:
-        print(f"\n{Fore.CYAN}[*] Iniciando módulo de Búsqueda de Usuario (Sherlock-style)...{Style.RESET_ALL}")
+        print(f"\n{Fore.CYAN}[*] Iniciando módulo de Búsqueda de Usuario...{Style.RESET_ALL}")
         sites_file = os.path.join(os.path.dirname(__file__), 'sites.json')
         sites = load_sites(sites_file)
         
