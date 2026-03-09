@@ -1,0 +1,23 @@
+{
+  "Taringa (Historico)": {
+    "url": "https://www.taringa.net/{}",
+    "errorType": "status_code"
+  },
+  "MercadoLibre (Perfil Vendedor)": {
+    "url": "https://perfil.mercadolibre.com.ar/{}",
+    "errorType": "status_code"
+  },
+  "GitHub": {
+    "url": "https://github.com/{}",
+    "errorType": "status_code"
+  },
+  "Twitter (X) - Búsqueda en Google": {
+    "url": "https://twitter.com/{}",
+    "errorType": "status_code",
+    "notes": "Direct access might redirect to login, Google search or API is better for production."
+  },
+   "Instagram": {
+    "url": "https://www.instagram.com/{}/",
+    "errorType": "status_code"
+  }
+}    
