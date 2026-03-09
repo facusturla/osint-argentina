@@ -163,6 +163,7 @@ Aunque este repositorio se enfoca en fuentes de Argentina, existen frameworks gl
 *   [Sherlock](https://github.com/sherlock-project/sherlock) - Herramienta fundamental para la búsqueda de cuentas de usuario por *username* a través de cientos de redes sociales y foros.
 *   [Maigret](https://github.com/soxoj/maigret) - Un avanzado *fork* de Sherlock enfocado en recopilar un dossier completo de un usuario, buscar en perfiles públicos y generar reportes analíticos.
 *   [Photon](https://github.com/s0md3v/Photon) - Increíblemente veloz *web crawler* extrae inteligentemente URLs, archivos, correos electrónicos, cuentas en redes y claves de API del sitio objetivo.
+*   [theHarvester](https://github.com/laramies/theHarvester) - Herramienta diseñada para la recolección temprana de inteligencia perimetral (emails, subdominios, IPs y URLs) utilizando fuentes públicas.
 
 ---
 
