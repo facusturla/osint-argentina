@@ -1,5 +1,9 @@
 # OSINT Argentina
 
+<p align="center">
+  <img src="assets/banner.png" alt="OSINT Argentina Banner" width="100%">
+</p>
+
 ![OSINT](https://img.shields.io/badge/OSINT-Argentina-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge)
