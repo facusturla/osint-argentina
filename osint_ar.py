@@ -4,6 +4,8 @@ import os
 
 from core.cuit_validator import analyze_cuit
 from core.username_search import load_sites, search_username
+from core.email_search import search_email
+from core.domain_info import get_domain_info
 from core.domain_info import get_domain_info
 
 try:
@@ -33,6 +35,7 @@ def main():
     # Define arguments
     parser.add_argument("-c", "--cuit", help="Analizar y validar un CUIT o CUIL argentino", type=str)
     parser.add_argument("-u", "--username", help="Buscar perfiles asociados a un nombre de usuario", type=str)
+    parser.add_argument("-e", "--email", help="Buscar cuentas registradas con una dirección de correo electrónico", type=str)
     parser.add_argument("-d", "--domain", help="Obtener información WHOIS básica de un dominio (ej: sitio.com.ar)", type=str)
 
     args = parser.parse_args()
@@ -69,6 +72,17 @@ def main():
                     print(f"      - {Fore.YELLOW}{site}:{Style.RESET_ALL} {url}")
             else:
                  print(f"  {Fore.RED}[-] No se encontraron perfiles públicos en los {len(sites)} sitios registrados.{Style.RESET_ALL}")
+
+    if args.email:
+        print(f"\n{Fore.CYAN}[*] Iniciando módulo de Búsqueda de Email...{Style.RESET_ALL}")
+        results = search_email(args.email)
+        
+        if results:
+            print(f"  {Fore.GREEN}[+] Cuentas encontradas registradas con '{args.email}':{Style.RESET_ALL}")
+            for site in results:
+                print(f"      - {Fore.YELLOW}{site}{Style.RESET_ALL}")
+        elif results is not None:
+             print(f"  {Fore.RED}[-] No se encontraron cuentas asociadas a este correo.{Style.RESET_ALL}")
 
     if args.domain:
         print(f"\n{Fore.CYAN}[*] Iniciando módulo de Información de Dominio...{Style.RESET_ALL}")

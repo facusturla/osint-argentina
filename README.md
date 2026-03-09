@@ -16,7 +16,7 @@ Este proyecto tiene como objetivo centralizar los recursos dispersos para facili
 
 La información listada en este repositorio apunta a fuentes de acceso público y legal. El uso de estos recursos debe realizarse en el marco de la **Ley 25.326 de Protección de los Datos Personales** y demás normativas vigentes en el territorio argentino. Los autores y contribuyentes no se responsabilizan por el mal uso de la información obtenida a través de los enlaces aquí provistos. Toda recolección y tratamiento de datos es bajo estricta responsabilidad del analista.
 
-## 💻 Herramienta OSINT Argentina (HIFA ARGENTINA)
+##  Herramienta OSINT Argentina (HIFA ARGENTINA)
 
 Junto al repositorio documental, hemos desarrollado un script modular en Python (`osint_ar.py`) para automatizar las búsquedas iniciales más comunes. **La herramienta es 100% segura, de código abierto, corre localmente en tu máquina y NO requiere ni expone ninguna API Key externa.**
 
@@ -45,11 +45,15 @@ Actualmente, el script cuenta con 3 módulos principales:
 
 ---
 
-## 📚 Directorio de Fuentes y Registros
+## Directorio de Fuentes y Registros
 
 1. [Identidad y Registros de Personas](#identidad-y-registros-de-personas)
+- [OSINT Argentina](#osint-argentina)
   - [Avisos Legales y Éticos](#avisos-legales-y-éticos)
-  - [Sumario](#sumario)
+  - [Herramienta OSINT Argentina (HIFA ARGENTINA)](#herramienta-osint-argentina-hifa-argentina)
+    - [Instalación](#instalación)
+    - [Uso](#uso)
+  - [Directorio de Fuentes y Registros](#directorio-de-fuentes-y-registros)
     - [Identidad y Registros de Personas](#identidad-y-registros-de-personas)
     - [Empresas, Finanzas y Tributación](#empresas-finanzas-y-tributación)
     - [Poder Judicial y Antecedentes](#poder-judicial-y-antecedentes)
@@ -58,6 +62,7 @@ Actualmente, el script cuenta con 3 módulos principales:
     - [Telecomunicaciones y Dominios](#telecomunicaciones-y-dominios)
     - [Datos Abiertos y Estadísticas](#datos-abiertos-y-estadísticas)
     - [Fuentes No Oficiales y Herramientas a Terceros](#fuentes-no-oficiales-y-herramientas-a-terceros)
+    - [Herramientas Internacionales Recomendadas](#herramientas-internacionales-recomendadas)
   - [Contribuciones](#contribuciones)
 
 ---
@@ -148,6 +153,16 @@ Estadísticas sociodemográficas, mapas y datos para análisis en bruto.
 *   [BuscarDatos](https://buscardatos.com/) - Buscador privado (a menudo con datos desactualizados) que indexa padrones telefónicos, DNI y CUIT.
 *   [Telexplorer](https://www.telexplorer.com.ar/) - Guía telefónica inversa (residencial y comercial) para Argentina.
 *   [Voligoma.com.ar (Internet Archive)](https://web.archive.org/web/*/voligoma.com.ar) - [Histórico] Indexador de registros que actualmente suele requerir WayBack Machine para análisis retrospectivos.
+
+---
+
+### Herramientas Internacionales Recomendadas
+
+Aunque este repositorio se enfoca en fuentes de Argentina, existen frameworks globales esenciales que son el estándar de la industria para complementar la investigación OSINT:
+
+*   [Sherlock](https://github.com/sherlock-project/sherlock) - Herramienta fundamental para la búsqueda de cuentas de usuario por *username* a través de cientos de redes sociales y foros.
+*   [Maigret](https://github.com/soxoj/maigret) - Un avanzado *fork* de Sherlock enfocado en recopilar un dossier completo de un usuario, buscar en perfiles públicos y generar reportes analíticos.
+*   [Photon](https://github.com/s0md3v/Photon) - Increíblemente veloz *web crawler* extrae inteligentemente URLs, archivos, correos electrónicos, cuentas en redes y claves de API del sitio objetivo.
 
 ---
 
