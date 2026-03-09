@@ -37,11 +37,11 @@ Junto al repositorio documental, hemos desarrollado un script modular en Python 
 Actualmente, el script cuenta con 3 módulos principales:
 
 *   **Búsqueda de Usuario (`-u`):** Rastrea la existencia de un *username* específico en redes sociales globales y plataformas locales (MercadoLibre, Taringa histórico, etc.).
-    `python osint_ar.py -u osintbrazuca`
+    `python osint_ar.py -u usuario`
 *   **Averiguación de Dominio (`-d`):** Recupera la dirección IP de un dominio y verifica si está registrado (especialmente útil para entender el estado de dominios `.ar` frente a NIC.ar).
-    `python osint_ar.py -d mercadolibre.com.ar`
+    `python osint_ar.py -d pagina web`
 *   **Validador de CUIT/CUIL (`-c`):** Valida matemáticamente (vía dígito verificador) si un número de CUIT o CUIL es real, e infiere el género o el tipo de persona/sociedad.
-    `python osint_ar.py -c 20123456781`
+    `python osint_ar.py -c 12345678910`
 
 ---
 
