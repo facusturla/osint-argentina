@@ -16,7 +16,7 @@ Este proyecto tiene como objetivo centralizar los recursos dispersos para facili
 
 La información listada en este repositorio apunta a fuentes de acceso público y legal. El uso de estos recursos debe realizarse en el marco de la **Ley 25.326 de Protección de los Datos Personales** y demás normativas vigentes en el territorio argentino. Los autores y contribuyentes no se responsabilizan por el mal uso de la información obtenida a través de los enlaces aquí provistos. Toda recolección y tratamiento de datos es bajo estricta responsabilidad del analista.
 
-## 💻 Herramienta OSINT Argentina (CLI)
+## 💻 Herramienta OSINT Argentina (HIFA ARGENTINA)
 
 Junto al repositorio documental, hemos desarrollado un script modular en Python (`osint_ar.py`) para automatizar las búsquedas iniciales más comunes. **La herramienta es 100% segura, de código abierto, corre localmente en tu máquina y NO requiere ni expone ninguna API Key externa.**
 
