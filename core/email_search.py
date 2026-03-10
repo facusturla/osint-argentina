@@ -24,8 +24,16 @@ async def _run_holehe(email, out):
             
     await client.aclose()
     
+import re
+
 def search_email(email):
     out = []
+    
+    # Validamos que el input sea realmente un formato de correo
+    if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+        print(f"{Fore.RED}[-] Error: '{email}' no parece ser una dirección de correo válida.{Style.RESET_ALL}")
+        return None
+
     print(f"{Fore.CYAN}[*] Iniciando búsqueda con holehe para {email}... Esto puede tardar unos momentos.{Style.RESET_ALL}")
     
     # We run the async holehe main function usig trio
