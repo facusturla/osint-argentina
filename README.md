@@ -34,13 +34,19 @@ Junto al repositorio documental, hemos desarrollado un script modular en Python 
 
 ### Uso
 
-Actualmente, el script cuenta con 3 módulos principales:
+Actualmente, el script cuenta con 5 módulos de recolección y análisis, además del menú de ayuda:
 
-*   **Búsqueda de Usuario (`-u`):** Rastrea la existencia de un *username* específico en redes sociales globales y plataformas locales (MercadoLibre, Taringa histórico, etc.).
+*   **Menú de Ayuda (`-h` / `--help`):** Muestra todas las opciones disponibles y su descripción en pantalla.
+    `python osint_ar.py -h`
+*   **Búsqueda de Usuario (`-u`):** Rastrea la existencia de un *username* específico en redes sociales globales y plataformas locales.
     `python osint_ar.py -u usuario`
-*   **Averiguación de Dominio (`-d`):** Recupera la dirección IP de un dominio y verifica si está registrado (especialmente útil para entender el estado de dominios `.ar` frente a NIC.ar).
+*   **Búsqueda por Email (`-e`):** Verifica en qué plataformas (redes sociales, foros, tiendas) está registrada una cuenta asociada a ese correo.
+    `python osint_ar.py -e email@ejemplo.com`
+*   **Cosecha de Emails por Dominio (`-H`):** Rastrea buscadores descentralizados y hace web crawling pasivo para encontrar emails expuestos, y verifica la existencia operativa del dominio a través de consultas DNS MX.
+    `python osint_ar.py -H dominio.com.ar`
+*   **Averiguación de Dominio (`-d`):** Recupera la dirección IP de un dominio y verifica si está registrado (especialmente útil para dominios `.ar` frente a NIC.ar).
     `python osint_ar.py -d pagina web`
-*   **Validador de CUIT/CUIL (`-c`):** Valida matemáticamente (vía dígito verificador) si un número de CUIT o CUIL es real, e infiere el género o el tipo de persona/sociedad.
+*   **Validador de CUIT/CUIL (`-c`):** Valida matemáticamente si un número de CUIT o CUIL es real, e infiere el género o el tipo de sociedad.
     `python osint_ar.py -c 12345678910`
 
 ---

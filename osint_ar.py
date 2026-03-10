@@ -5,7 +5,7 @@ import os
 from core.cuit_validator import analyze_cuit
 from core.username_search import load_sites, search_username
 from core.email_search import search_email
-from core.domain_info import get_domain_info
+from core.email_harvester import harvest_emails
 from core.domain_info import get_domain_info
 
 try:
@@ -36,6 +36,7 @@ def main():
     parser.add_argument("-c", "--cuit", help="Analizar y validar un CUIT o CUIL argentino", type=str)
     parser.add_argument("-u", "--username", help="Buscar perfiles asociados a un nombre de usuario", type=str)
     parser.add_argument("-e", "--email", help="Buscar cuentas registradas con una dirección de correo electrónico", type=str)
+    parser.add_argument("-H", "--harvest", help="Cosechar emails expuestos de un dominio y verificar existencia", type=str)
     parser.add_argument("-d", "--domain", help="Obtener información WHOIS básica de un dominio (ej: sitio.com.ar)", type=str)
 
     args = parser.parse_args()
@@ -96,6 +97,24 @@ def main():
                  print(f"  {Fore.RED}[!] Estado NIC.ar:{Style.RESET_ALL} {nic['status']} - Probablemente registrado por un tercero.")
             else:
                  print(f"  {Fore.GREEN}[!] Estado NIC.ar:{Style.RESET_ALL} {nic['status']} - Podría estar disponible.")
+
+    if args.harvest:
+        print(f"\n{Fore.CYAN}[*] Iniciando módulo de Recolección Perimetral de Emails para '{args.harvest}'...{Style.RESET_ALL}")
+        results = harvest_emails(args.harvest)
+        
+        print(f"  {Fore.GREEN}[+] Verificación de Dominio (MX):{Style.RESET_ALL}")
+        if results["mx_valid"]:
+             print(f"      - El dominio {Fore.GREEN}PUEDE RECIBIR CORREOS{Style.RESET_ALL} (Registros MX válidos encontrados).")
+        else:
+             print(f"      - El dominio {Fore.RED}NO PARECE RECIBIR CORREOS{Style.RESET_ALL} (Sin registros MX). Los emails podrían ser falsos positivos.")
+             
+        if results["emails"]:
+            print(f"  {Fore.GREEN}[+] Emails Expuestos Encontrados ({len(results['emails'])}):{Style.RESET_ALL}")
+            for email in results["emails"]:
+                print(f"      - {Fore.YELLOW}{email}{Style.RESET_ALL}")
+        else:
+             print(f"  {Fore.RED}[-] No se encontraron emails expuestos públicamente para este dominio.{Style.RESET_ALL}")
+
 
 if __name__ == "__main__":
     main()
