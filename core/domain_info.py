@@ -1,5 +1,4 @@
 import socket
-import requests
 from urllib.parse import urlparse
 
 def get_ip_from_domain(domain: str) -> str:

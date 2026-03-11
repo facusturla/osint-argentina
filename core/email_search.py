@@ -1,6 +1,7 @@
 import trio
 import httpx
-from holehe.core import *
+import re
+import holehe.core
 from colorama import Fore, Style
 
 class DummyArgs:
@@ -9,8 +10,6 @@ class DummyArgs:
         self.nopasswordrecovery = False
 
 async def _run_holehe(email, out):
-    import holehe.core
-    
     modules = holehe.core.import_submodules("holehe.modules")
     websites = holehe.core.get_functions(modules, DummyArgs())
     
@@ -23,8 +22,6 @@ async def _run_holehe(email, out):
             )
             
     await client.aclose()
-    
-import re
 
 def search_email(email):
     out = []
@@ -36,14 +33,12 @@ def search_email(email):
 
     print(f"{Fore.CYAN}[*] Iniciando búsqueda con holehe para {email}... Esto puede tardar unos momentos.{Style.RESET_ALL}")
     
-    # We run the async holehe main function usig trio
     try:
          trio.run(_run_holehe, email, out)
     except Exception as e:
          print(f"{Fore.RED}[-] Error durante la ejecución de holehe: {e}{Style.RESET_ALL}")
          return None
          
-    # Parse the output
     # out is a list of dicts: {'name': 'SiteName', 'exists': True/False, 'rateLimit': True/False, ...}
     registered_sites = [site['name'] for site in out if site.get('exists') is True]
     

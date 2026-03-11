@@ -8,8 +8,6 @@ def load_sites(file_path="sites.json"):
         return {}
     with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
-import aiohttp
-import asyncio
 
 async def fetch_profile(session, site_name, site_data, username, found_profiles):
     url = site_data.get("url").format(username)
