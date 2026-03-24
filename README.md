@@ -193,14 +193,6 @@ Aunque este repositorio se enfoca en fuentes de Argentina, existen frameworks gl
 
 ---
 
-## Desarrollo
-
-Este proyecto cuenta con convenciones de trabajo documentadas en [`CLAUDE.md`](./CLAUDE.md). Si contribuís con código o automatizaciones, revisá ese archivo antes de empezar: detalla el flujo de trabajo, estrategia de ramas, estándares de verificación y gestión de tareas.
-
-El directorio `tasks/` contiene:
-- `todo.md` — plan de trabajo activo con ítems chequeables
-- `lessons.md` — registro de lecciones aprendidas y patrones a evitar
-
 ## Contribuciones
 
 Se agradecen las sugerencias, reportes de enlaces caídos y sumas de nuevas herramientas orientadas a **OSINT Argentina**. Por favor, abrí un *Issue* o enviá un *Pull Request* considerando que la documentación añadida sea legal, pública y mantenga un estándar profesional.
