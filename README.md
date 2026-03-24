@@ -34,20 +34,40 @@ Junto al repositorio documental, hemos desarrollado un script modular en Python 
 
 ### Uso
 
-Actualmente, el script cuenta con 5 módulos de recolección y análisis, además del menú de ayuda:
+El script cuenta con **8 módulos** de recolección y análisis, además del menú de ayuda y exportación de reportes:
 
 *   **Menú de Ayuda (`-h` / `--help`):** Muestra todas las opciones disponibles y su descripción en pantalla.
     `python osint_ar.py -h`
-*   **Búsqueda de Usuario (`-u`):** Rastrea la existencia de un *username* específico en redes sociales globales y plataformas locales.
+*   **Búsqueda de Usuario (`-u`):** Rastrea la existencia de un *username* específico en más de 80 redes sociales y plataformas globales/locales.
     `python osint_ar.py -u usuario`
 *   **Búsqueda por Email (`-e`):** Verifica en qué plataformas (redes sociales, foros, tiendas) está registrada una cuenta asociada a ese correo.
     `python osint_ar.py -e email@ejemplo.com`
 *   **Cosecha de Emails por Dominio (`-H`):** Rastrea buscadores descentralizados y hace web crawling pasivo para encontrar emails expuestos, y verifica la existencia operativa del dominio a través de consultas DNS MX.
     `python osint_ar.py -H dominio.com.ar`
 *   **Averiguación de Dominio (`-d`):** Recupera la dirección IP de un dominio y verifica si está registrado (especialmente útil para dominios `.ar` frente a NIC.ar).
-    `python osint_ar.py -d pagina web`
+    `python osint_ar.py -d pagina.com.ar`
 *   **Validador de CUIT/CUIL (`-c`):** Valida matemáticamente si un número de CUIT o CUIL es real, e infiere el género o el tipo de sociedad.
-    `python osint_ar.py -c 12345678910`
+    `python osint_ar.py -c 20304050607`
+*   **Declaraciones Juradas de Funcionarios (`-j`):** Busca declaraciones juradas patrimoniales de funcionarios públicos en el portal de datos abiertos de la Justicia (datos.jus.gob.ar / Oficina Anticorrupción). Sin API key requerida.
+    `python osint_ar.py -j "Juan Perez"`
+*   **Central de Deudores BCRA (`-b`):** Consulta el historial crediticio de una persona física o jurídica en la Central de Deudores del Banco Central por CUIT. API pública oficial del BCRA.
+    `python osint_ar.py -b 20304050607`
+*   **Normalización de Domicilio GeoRef (`-g`):** Normaliza un domicilio argentino contra el padrón oficial del IGN (Instituto Geográfico Nacional) obteniendo calle, localidad, provincia y coordenadas. API pública oficial.
+    `python osint_ar.py -g "Av. Corrientes 1234, Buenos Aires"`
+
+#### Exportar Reporte
+
+Cualquier combinación de módulos puede exportarse como dossier estructurado con `--report`:
+
+```bash
+# Reporte JSON de una investigación combinada
+python osint_ar.py -c 20304050607 -b 20304050607 -j "Juan Perez" --report json
+
+# Reporte HTML de búsqueda de usuario + email
+python osint_ar.py -u investigado -e correo@ejemplo.com --report html
+```
+
+El archivo se genera en el directorio actual con nombre `reporte_<objetivo>_<timestamp>.[json|html]`.
 
 ---
 
