@@ -4,9 +4,3 @@ colorama>=0.4.6
 holehe>=1.61
 aiohttp>=3.9.0
 dnspython>=2.4.0
-
-# job-cv-customizer
-anthropic>=0.102.0
-weasyprint>=60.0
-markdown>=3.5.0
-jinja2>=3.1.0
