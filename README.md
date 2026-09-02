@@ -109,6 +109,7 @@ Herramientas para el rastreo de sociedades, historiales crediticios y estado tri
 
 *   [Boletín Oficial de la República Argentina (BORA)](https://www.boletinoficial.gob.ar/) - Publicación de edictos, constitución de sociedades (SRL, SA), concursos, quiebras y nombramientos.
 *   [Central de Deudores (BCRA)](https://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp) - Historial crediticio, cheques rechazados y deudas financieras registradas en el Banco Central (Cálculo de riesgo crediticio).
+*   [Company Records](https://records.knowyourcustomer.com/es/coverage/argentina) - Búsqueda gratuita de sociedades en 149 jurisdicciones, informes obtenidos en directo del registro oficial desde US$19. De Know Your Customer Limited.
 *   [Constancia de CUIT (AFIP)](https://cuitonline.afip.gob.ar/constancia/jrun/InicioMac.do) - Verificación de inscripción tributaria y actividades inscriptas.
 *   [Facturación y Registros Apócrifos (AFIP)](https://serviciosweb.afip.gob.ar/genericos/facturasApocrifas/default.aspx) - Base de datos pública de contribuyentes con facturación irregular.
 *   [Inspección General de Justicia (IGJ)](https://www.argentina.gob.ar/justicia/igj) - Trámites y búsqueda de entidades comerciales y civiles en la órbita nacional.
